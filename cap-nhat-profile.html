@@ -748,6 +748,231 @@
           </div>
         </div>
 
+
+        <!-- Update Profile Screen -->
+        <div class="bg-white border border-[#e1dfdd] rounded shadow-sm overflow-hidden">
+          <div class="px-5 py-4 border-b border-[#e1dfdd] flex items-center justify-between">
+            <div>
+              <h2 class="font-semibold text-lg">Cập nhật profile nhân viên</h2>
+              <p class="text-xs text-[#605e5c] mt-1">BS. Nguyễn Văn An • NV00034 • Cập nhật dữ liệu nghiệp vụ EMR</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="rounded-full px-2 py-1 text-xs font-semibold bg-[#dff6dd] text-[#107c10]">Profile OK</span>
+              <span class="rounded-full px-2 py-1 text-xs font-semibold bg-[#deecf9] text-[#005a9e]">Auth linked</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-12">
+            <div class="col-span-12 xl:col-span-8 p-5 space-y-6">
+              <!-- Readonly HRM/Auth -->
+              <section>
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="font-semibold">Thông tin liên kết</h3>
+                  <span class="text-xs text-[#605e5c]">Thông tin từ AuthServer và HRM, chỉ đọc tại EMR</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  <div class="border border-[#e1dfdd] rounded p-3 bg-[#faf9f8]">
+                    <div class="text-xs text-[#605e5c]">AuthUserId</div>
+                    <div class="font-semibold truncate">AUTH-8f21-9ac2</div>
+                  </div>
+                  <div class="border border-[#e1dfdd] rounded p-3 bg-[#faf9f8]">
+                    <div class="text-xs text-[#605e5c]">HRMEmployeeId</div>
+                    <div class="font-semibold truncate">HRM-21ac-332a</div>
+                  </div>
+                  <div class="border border-[#e1dfdd] rounded p-3 bg-[#faf9f8]">
+                    <div class="text-xs text-[#605e5c]">EmployeeCode</div>
+                    <div class="font-semibold">NV00034</div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Basic EMR Profile -->
+              <section class="border-t border-[#e1dfdd] pt-5">
+                <h3 class="font-semibold mb-3">Thông tin profile EMR</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium mb-1">Họ tên hiển thị</label>
+                    <input value="BS. Nguyễn Văn An" class="w-full border border-[#8a8886] rounded px-3 py-2 text-sm outline-none focus:border-[#0078d4] focus:ring-1 focus:ring-[#0078d4]">
+                  </div>
+
+                  <div>
+                    <label class="block text-sm font-medium mb-1">Tên không dấu</label>
+                    <input value="Nguyen Van An" class="w-full border border-[#8a8886] rounded px-3 py-2 text-sm outline-none focus:border-[#0078d4] focus:ring-1 focus:ring-[#0078d4]">
+                  </div>
+
+                  <div>
+                    <label class="block text-sm font-medium mb-1">Khoa EMR mặc định</label>
+                    <select class="w-full border border-[#8a8886] rounded px-3 py-2 text-sm outline-none focus:border-[#0078d4]">
+                      <option selected="">Khoa Nội</option>
+                      <option>Khoa Cấp cứu</option>
+                      <option>Khoa Khám bệnh</option>
+                      <option>Khoa Xét nghiệm</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm font-medium mb-1">Phòng / Đơn vị</label>
+                    <select class="w-full border border-[#8a8886] rounded px-3 py-2 text-sm outline-none focus:border-[#0078d4]">
+                      <option selected="">Phòng Nội tổng hợp</option>
+                      <option>Phòng Nội tim mạch</option>
+                      <option>Phòng Nội tiêu hóa</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm font-medium mb-1">Chức danh chuyên môn</label>
+                    <input value="Bác sĩ điều trị" class="w-full border border-[#8a8886] rounded px-3 py-2 text-sm outline-none focus:border-[#0078d4] focus:ring-1 focus:ring-[#0078d4]">
+                  </div>
+
+                  <div>
+                    <label class="block text-sm font-medium mb-1">Chứng chỉ hành nghề</label>
+                    <input value="012345/HCM-CCHN" class="w-full border border-[#8a8886] rounded px-3 py-2 text-sm outline-none focus:border-[#0078d4] focus:ring-1 focus:ring-[#0078d4]">
+                  </div>
+
+                  <div>
+                    <label class="block text-sm font-medium mb-1">Trạng thái profile</label>
+                    <select class="w-full border border-[#8a8886] rounded px-3 py-2 text-sm outline-none focus:border-[#0078d4]">
+                      <option selected="">Đang hoạt động</option>
+                      <option>Tạm khóa trong EMR</option>
+                      <option>Ngừng sử dụng</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm font-medium mb-1">Ngày hiệu lực</label>
+                    <input type="date" value="2026-05-25" class="w-full border border-[#8a8886] rounded px-3 py-2 text-sm outline-none focus:border-[#0078d4] focus:ring-1 focus:ring-[#0078d4]">
+                  </div>
+                </div>
+              </section>
+
+              <!-- Roles -->
+              <section class="border-t border-[#e1dfdd] pt-5">
+                <div class="flex items-center justify-between mb-3">
+                  <h3 class="font-semibold">Vai trò và quyền EMR</h3>
+                  <button class="text-sm text-[#005a9e] hover:underline">Chọn theo mẫu quyền</button>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="border border-[#e1dfdd] rounded p-4 bg-[#faf9f8]">
+                    <div class="font-medium mb-3">Vai trò nghiệp vụ</div>
+                    <div class="space-y-2 text-sm">
+                      <label class="flex items-center gap-2"><input type="checkbox" checked="" class="accent-[#0078d4]"> Bác sĩ điều trị</label>
+                      <label class="flex items-center gap-2"><input type="checkbox" checked="" class="accent-[#0078d4]"> Bác sĩ ký hồ sơ</label>
+                      <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#0078d4]"> Trưởng khoa</label>
+                      <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#0078d4]"> Quản trị khoa</label>
+                    </div>
+                  </div>
+
+                  <div class="border border-[#e1dfdd] rounded p-4 bg-[#faf9f8]">
+                    <div class="font-medium mb-3">Quyền thao tác</div>
+                    <div class="space-y-2 text-sm">
+                      <label class="flex items-center gap-2"><input type="checkbox" checked="" class="accent-[#0078d4]"> EMR.Patient.View</label>
+                      <label class="flex items-center gap-2"><input type="checkbox" checked="" class="accent-[#0078d4]"> EMR.Document.View</label>
+                      <label class="flex items-center gap-2"><input type="checkbox" checked="" class="accent-[#0078d4]"> EMR.Document.Sign</label>
+                      <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#0078d4]"> EMR.Document.Delete</label>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Signing settings -->
+              <section class="border-t border-[#e1dfdd] pt-5">
+                <h3 class="font-semibold mb-3">Cấu hình ký của profile</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium mb-1">Loại ký mặc định</label>
+                    <select class="w-full border border-[#8a8886] rounded px-3 py-2 text-sm outline-none focus:border-[#0078d4]">
+                      <option selected="">Chữ ký số</option>
+                      <option>Chữ ký điện tử</option>
+                      <option>Không cấu hình</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm font-medium mb-1">Chứng thư mặc định</label>
+                    <select class="w-full border border-[#8a8886] rounded px-3 py-2 text-sm outline-none focus:border-[#0078d4]">
+                      <option selected="">VNPT-CA • 5400A9F3...</option>
+                      <option>FPT-CA • 3301BC92...</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-sm font-medium mb-1">Mẫu hiển thị chữ ký</label>
+                    <select class="w-full border border-[#8a8886] rounded px-3 py-2 text-sm outline-none focus:border-[#0078d4]">
+                      <option selected="">Mẫu bác sĩ điều trị</option>
+                      <option>Mẫu trưởng khoa</option>
+                      <option>Mẫu xét nghiệm</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="mt-3 flex flex-wrap gap-4 text-sm">
+                  <label class="flex items-center gap-2"><input type="checkbox" checked="" class="accent-[#0078d4]"> Yêu cầu PIN khi ký</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" checked="" class="accent-[#0078d4]"> Ghi log performance khi ký</label>
+                  <label class="flex items-center gap-2"><input type="checkbox" class="accent-[#0078d4]"> Cho phép ký tự động</label>
+                </div>
+              </section>
+            </div>
+
+            <!-- Right audit/change summary -->
+            <aside class="col-span-12 xl:col-span-4 border-t xl:border-t-0 xl:border-l border-[#e1dfdd] bg-[#faf9f8] p-5">
+              <h3 class="font-semibold">Kiểm tra thay đổi</h3>
+              <p class="text-xs text-[#605e5c] mt-1">Thông tin sẽ ghi vào audit log khi lưu</p>
+
+              <div class="mt-4 space-y-3 text-sm">
+                <div class="bg-white border border-[#e1dfdd] rounded p-3">
+                  <div class="text-xs uppercase text-[#605e5c] font-semibold">Thay đổi phát hiện</div>
+                  <ul class="mt-2 space-y-2">
+                    <li class="flex justify-between gap-3">
+                      <span>Khoa EMR</span>
+                      <b>Khoa Nội</b>
+                    </li>
+                    <li class="flex justify-between gap-3">
+                      <span>Vai trò ký</span>
+                      <b>Bác sĩ ký hồ sơ</b>
+                    </li>
+                    <li class="flex justify-between gap-3">
+                      <span>Chứng thư</span>
+                      <b>VNPT-CA</b>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="bg-white border border-[#e1dfdd] rounded p-3">
+                  <div class="text-xs uppercase text-[#605e5c] font-semibold">Audit metadata</div>
+                  <div class="mt-2 flex justify-between"><span>UpdatedBy</span><b>admin</b></div>
+                  <div class="flex justify-between"><span>Source</span><b>Admin Portal</b></div>
+                  <div class="flex justify-between"><span>Action</span><b>UpdateProfile</b></div>
+                </div>
+
+                <div class="bg-white border border-[#e1dfdd] rounded p-3">
+                  <label class="block text-sm font-medium mb-1">Lý do cập nhật</label>
+                  <textarea class="w-full h-24 border border-[#8a8886] rounded px-3 py-2 text-sm outline-none focus:border-[#0078d4] focus:ring-1 focus:ring-[#0078d4]" placeholder="Ví dụ: Cập nhật quyền ký hồ sơ theo phân công khoa..."></textarea>
+                </div>
+              </div>
+
+              <div class="mt-5 p-3 rounded bg-[#fff4ce] text-[#3b3a39] text-xs">
+                Không nên chỉnh trực tiếp dữ liệu HRM tại màn hình này. Nếu sai phòng ban/chức vụ gốc, hãy cập nhật ở HRM rồi đồng bộ lại.
+              </div>
+
+              <div class="mt-5 flex flex-col gap-2">
+                <button class="w-full px-4 py-2 rounded bg-[#0078d4] text-white hover:bg-[#005a9e] text-sm font-medium">
+                  Lưu thay đổi
+                </button>
+                <button class="w-full px-4 py-2 rounded border border-[#8a8886] bg-white hover:bg-[#f3f2f1] text-sm">
+                  Lưu và đồng bộ lại quyền
+                </button>
+                <button class="w-full px-4 py-2 rounded text-[#605e5c] hover:bg-[#f3f2f1] text-sm">
+                  Hủy
+                </button>
+              </div>
+            </aside>
+          </div>
+        </div>
+
         <!-- Ownership -->
         <div class="bg-white border border-[#e1dfdd] rounded p-5 shadow-sm">
           <h3 class="font-semibold mb-3">Ownership dữ liệu</h3>
